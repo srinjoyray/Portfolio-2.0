@@ -30,6 +30,9 @@
     color: var(--light-text);
     list-style: none;
 }
+.anchor{
+    cursor: pointer;
+}
 .themeToggle{
     grid-column: 4;
     display: flex;
