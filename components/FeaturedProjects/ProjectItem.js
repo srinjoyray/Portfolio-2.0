@@ -1,18 +1,11 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { useRouter } from 'next/router'
 
 import styles from '../../styles/ProjectItem.module.css';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectItem = ({project}) => {
-
-    const router = useRouter()
-    if (router.isFallback) {
-        return <div>Loading...</div>
-    }
-
     return (
         <div className={styles.item} >
             <div className={styles.image}>
