@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ScrollToTop } from "react-to-top";
 import ProjectItem from "../components/FeaturedProjects/ProjectItem";
 import Footer from "../components/Footer";
@@ -7,7 +8,16 @@ import { getProjects } from "../services";
 import styles from '../styles/Projects.module.css'
 
 const projects = () => {
-    const projects = await getProjects();
+
+    const [projects,setProjects] = useState();
+    useEffect(() => {
+        async function fetchMyAPI() {
+            let response = await getProjects();
+            setProjects(response);
+        }
+      
+        fetchMyAPI();
+    }, [])
 
     return (
         <div className={styles.projects}>
@@ -19,7 +29,7 @@ const projects = () => {
                 
                 <div className={styles.projectItem}>
                     {
-                        projects.map((project,index) => <ProjectItem key={index} project={project} /> )
+                        projects?.map((project,index) => <ProjectItem key={index} project={project} /> )
                     }
                 </div>
             </div>
