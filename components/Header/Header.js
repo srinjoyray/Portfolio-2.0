@@ -25,27 +25,27 @@ const Header = () => {
                         <ul className={styles.navLink}>
                             <li>
                                 <Link href="/#about">
-                                    <a className={styles.anchor} onClick={()=>setToggleMenu(false)}>About</a>
+                                    <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>About</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/projects">
-                                    <a className={styles.anchor} onClick={()=>setToggleMenu(false)}>Projects</a>
+                                    <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Projects</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/#achievements">
-                                    <a className={styles.anchor} onClick={()=>setToggleMenu(false)}>Achievements</a>
+                                    <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Achievements</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/blogs">
-                                    <a className={styles.anchor} onClick={()=>setToggleMenu(false)}>Blogs</a>
+                                    <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Blogs</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/#contact">
-                                    <a href="/#contact" className={styles.anchor} onClick={()=>setToggleMenu(false)}>Contact</a>
+                                    <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Contact</span>
                                 </Link>
                             </li>
                         </ul>
