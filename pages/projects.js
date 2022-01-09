@@ -3,15 +3,9 @@ import ProjectItem from "../components/FeaturedProjects/ProjectItem";
 import Footer from "../components/Footer";
 import Header from "../components/Header/Header";
 import { getProjects } from "../services";
-import { useRouter } from 'next/router'
 import styles from '../styles/Projects.module.css'
 
 const projects = ({projects=[]}) => {
-
-    const router = useRouter()
-    if (router.isFallback) {
-        return <div>Loading...</div>
-    }
 
     return (
         <div className={styles.projects}>
