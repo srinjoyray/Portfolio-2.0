@@ -24,27 +24,27 @@ const Header = () => {
                     (toggleMenu || width>800) && (
                         <ul className={styles.navLink}>
                             <li>
-                                <Link href="/#about">
+                                <Link href="/#about" passHref>
                                     <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>About</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/projects">
+                                <Link href="/projects" passHref>
                                     <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Projects</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/#achievements">
+                                <Link href="/#achievements" passHref>
                                     <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Achievements</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/blogs">
+                                <Link href="/blogs" passHref>
                                     <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Blogs</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/#contact">
+                                <Link href="/#contact" passHref>
                                     <span className={styles.anchor} onClick={()=>setToggleMenu(false)}>Contact</span>
                                 </Link>
                             </li>

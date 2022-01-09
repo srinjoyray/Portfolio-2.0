@@ -17,7 +17,7 @@ const projects = ({projects}) => {
                 
                 <div className={styles.projectItem}>
                     {
-                        projects.map((project) => <ProjectItem project={project} /> )
+                        projects.map((project,index) => <ProjectItem key={index} project={project} /> )
                     }
                 </div>
             </div>

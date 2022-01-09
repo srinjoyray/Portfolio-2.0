@@ -20,8 +20,9 @@ const Achievements = ({achievements}) => {
                 animate={false}
             >
                 {
-                    achievements.map((achievement)=>
+                    achievements.map((achievement,index)=>
                         <VerticalTimelineElement
+                            key={index}
                             date={achievement.date}
                             dateClassName={styles.date}
                             iconClassName={styles.iconStyle}
@@ -34,7 +35,7 @@ const Achievements = ({achievements}) => {
                                 {achievement.title}
                                 {
                                     achievement.url ? 
-                                    <a href={achievement.url} target="_blank">
+                                    <a href={achievement.url} target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon icon={faExternalLinkAlt} className={styles.link}/>
                                     </a>
                                     :

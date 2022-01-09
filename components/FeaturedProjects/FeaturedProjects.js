@@ -13,10 +13,10 @@ const FeaturedProjects = ({projects}) => {
             </div>
             <div className={styles.projectItem}>
                 {
-                    projects.map((project) => <ProjectItem project={project} /> )
+                    projects.map((project,index) => <ProjectItem key={index} project={project} /> )
                 }
             </div>
-            <Link href="/projects">
+            <Link href="/projects" passHref={true}>
                 <div className={styles.seeMore}>
                     See all projects <FontAwesomeIcon icon={faLongArrowAltRight} />
                 </div>

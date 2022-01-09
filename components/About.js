@@ -13,7 +13,7 @@ export default function About({about}) {
     return (
         <div id="about" className={styles.about}>
             <div className={styles.aboutContent}>
-                <p className={styles.name}>Hi, I'm Srinjoy Ray</p>
+                <p className={styles.name}>Hi, I&#39;m Srinjoy Ray</p>
                 
                 <span className={styles.tagline}> {tagline} </span>
 
@@ -38,12 +38,12 @@ export default function About({about}) {
                 </div>
 
                 <div className={styles.aboutButtons}>
-                    <Link href='/projects'>
+                    <Link href='/projects' passHref>
                         <button className={styles.button}>
                             <FontAwesomeIcon icon={faLaptopCode} className={styles.buttonIcon}/> See my work
                         </button>
                     </Link>
-                    <Link href='/blogs'>
+                    <Link href='/blogs' passHref>
                         <button className={styles.button}>
                             <FontAwesomeIcon icon={faReadme} className={styles.buttonIcon}/>  Read my blogs
                         </button>
