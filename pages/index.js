@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import About from '../components/About'
 import Header from '../components/Header/Header'
-import Projects from '../components/FeaturedProjects/FeaturedProjects'
+import FeaturedProjects from '../components/Projects/FeaturedProjects'
 import { getAbout, getAchievements, getFeaturedProjects, } from '../services'
 import { ScrollToTop } from 'react-to-top'
 
@@ -20,7 +20,7 @@ export default function Home({about,projects,achievements}) {
 
       <Header/>
       <About about={about} />
-      <Projects projects={projects} />
+      <FeaturedProjects projects={projects} />
       <Achievements achievements={achievements} />
       <Contact/>
       <Footer/>

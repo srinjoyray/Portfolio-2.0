@@ -1,11 +1,12 @@
 import { ScrollToTop } from "react-to-top";
-import ProjectItem from "../components/FeaturedProjects/ProjectItem";
+import ProjectItem from "../components/Projects/ProjectItem";
 import Footer from "../components/Footer";
 import Header from "../components/Header/Header";
 import { getProjects } from "../services";
 import styles from '../styles/Projects.module.css'
+import Projects from "../components/Projects/Projects";
 
-const projects = ({projects=[]}) => {
+const projects = () => {
 
     return (
         <div className={styles.projects}>
@@ -14,11 +15,11 @@ const projects = ({projects=[]}) => {
                 <div className={styles.heading}>
                     Projects
                 </div>
-                
                 <div className={styles.projectItem}>
-                    {
+                    {/* {
                         projects?.map((project,index) => <ProjectItem key={index} project={project} /> )
-                    }
+                    } */}
+                    <Projects/>
                 </div>
             </div>
             <Footer/>
@@ -30,9 +31,9 @@ const projects = ({projects=[]}) => {
 export default projects
 
 
-export async function getStaticProps(context) {
-    const projects = await getProjects();
-    return {
-      props: { projects },
-    };
-}
+// export async function getStaticProps(context) {
+//     const projects = await getProjects();
+//     return {
+//       props: { projects },
+//     };
+// }
