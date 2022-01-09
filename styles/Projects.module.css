@@ -1,0 +1,31 @@
+.projects{
+    background-color: var(--dark-background);
+}
+.heading{
+    background-image: var(--gradient);
+    background-clip: text;
+    color:transparent;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px auto;
+    text-align: center;
+}
+.body{
+    width: 90%;
+    margin: auto;
+}
+.projectItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:30px
+}
+
+
+@media only screen and (max-width: 800px){
+    .projectItem{
+        grid-template-columns: 1fr ;
+    }
+    .heading{
+        font-size: 36px;
+    }
+}

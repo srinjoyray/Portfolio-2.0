@@ -1,0 +1,29 @@
+.blogs{
+    background-color: var(--dark-background);
+    min-height: 100vh;
+}
+.heading{
+    background-image: var(--gradient);
+    background-clip: text;
+    color:transparent;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px auto;
+    text-align: center;
+}
+.body{
+    height: 80vh;
+}
+.comingSoon{
+    color: var(--light-text);
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 800px){
+    .heading{
+        font-size: 36px;
+    }
+}

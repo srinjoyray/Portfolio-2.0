@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,4 +17,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.theme-dark {
+  --light-text: #F9F8F8;  
+  --dark-text: #52beb4;;
+  --light-background: #1a2539;
+  --dark-background: rgb(3 10 25 / 90%);
+  --gradient: linear-gradient(97deg, rgba(249,35,40,1) 0%, rgba(143,230,47,1) 52%, rgba(255,33,0,1) 100%);
+}
+
+.theme-light {
+  --dark-text: #5E4B56;
+  --light-text: #5E4B56;
+  --dark-background: #DBE7E4;
+  --light-background: #EDDCD2;
+  --accent: #DBE7E4;
+  --button-border: #5E4B56;
+  --gradient: linear-gradient(97deg, rgba(249,35,40,1) 0%, rgba(143,230,47,1) 52%, rgba(255,33,0,1) 100%);
 }

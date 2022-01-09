@@ -1,0 +1,106 @@
+.contact{
+    width: 90%;
+    margin: 30px auto 0 auto;
+}
+.heading{
+    background-image: var(--gradient);
+    background-clip: text;
+    color:transparent;
+    font-size: 36px;
+    font-weight: 600;
+}
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
+}
+.static{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-text);
+}
+.static p {
+    margin:0px auto 20px auto;
+    font-size: 18px;
+}
+.icon{
+    color: var(--light-text);
+    font-size: 18px;
+    margin: 0 10px;
+}
+/* .links{
+    
+} */
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 30px auto;
+}
+.input{
+    margin-bottom: 10px;
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--light-background);
+    color: var(--light-text); 
+    font-size: 16px;
+    
+}
+.input::placeholder{
+    color: var(--light-text);
+}
+.submit{
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--light-background);
+    color: var(--light-text); 
+    margin: auto;
+    margin-left: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.submit:hover{
+    font-size: 17px;
+}
+.submitIcon{
+    margin-left: 5px;
+}
+@media only screen and (max-width: 800px) {
+    .contact{
+        margin: 20px auto 0 auto;
+    }
+    .body{
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+    }
+    .heading{
+        font-size: 24px;
+    }
+    .static{
+        margin: 5px auto;
+    }
+    .static p{
+        margin:0px auto 10px auto;
+        font-size: 14px;
+    }
+    .icon{
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    .form{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .input{
+        font-size: 13px;
+    }
+    .submit{
+        font-size: 14px;
+        margin:0;
+    }
+
+}

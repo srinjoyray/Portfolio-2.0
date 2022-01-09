@@ -1,0 +1,15 @@
+.footer{
+    width: 90%;
+    color: var(--light-text);
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 800px){
+    .footer{
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+}

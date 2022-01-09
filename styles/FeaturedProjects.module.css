@@ -1,0 +1,46 @@
+.projects{
+    width: 90vw;
+    margin: 40px auto 0 auto;
+    padding-bottom: 20px;
+}
+.heading{
+    background-image: var(--gradient);
+    background-clip: text;
+    color:transparent;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.projectItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:30px
+}
+
+.seeMore{
+    display: inline-block;
+    font-size: 20px;
+    color:var(--light-text);
+    cursor: pointer;
+    margin-left: 2px;
+}
+.seeMore:hover{
+    font-size: 22px;
+}
+@media only screen and (max-width: 800px){
+    .projects{
+        margin: 30px auto 0 auto;
+    }
+    .projectItem{
+        grid-template-columns: 1fr ;
+    }
+    .heading{
+        font-size: 24px;
+    }
+    .seeMore{
+        font-size: 16px;
+    }
+    .seeMore:hover{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,63 @@
+.achievements{
+    width: 90%;
+    margin: 20px auto;
+}
+.heading{
+    background-image: var(--gradient);
+    background-clip: text;
+    color:transparent;
+    font-size: 36px;
+    font-weight: 600;
+}
+.timeline{
+    margin: 20px auto;
+}
+.iconStyle{
+    background-color: var(--light-background);
+    
+}
+.star{
+    padding-left: 1px;
+    font-size: 20px;
+    color: var(--light-text);
+}
+.date{
+    color: var(--light-text);
+    font-size: 16px !important;
+}
+.item h3{
+    color: var(--light-text);
+    font-size: 20px;
+}
+.link{
+    margin-left: 15px;
+    cursor: pointer;
+}
+.item p{
+    color: var(--dark-text);
+    font-size: 16px;
+}
+@media only screen and (max-width: 800px){
+    .achievements{
+        margin: 10px auto;
+    }
+    .heading{
+        font-size: 24px;
+    }
+    .timeline{
+        margin: 10px auto;
+    }
+    .star{
+        font-size: 16px;
+        padding-left: 6px;
+    }
+    .item h3{
+        font-size: 16px;
+    }
+    .item p{
+        font-size: 12px;
+    }
+    .date{
+        font-size: 12px !important;
+    }
+}
