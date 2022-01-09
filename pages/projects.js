@@ -6,7 +6,7 @@ import { getProjects } from "../services";
 
 import styles from '../styles/Projects.module.css'
 
-const projects = ({projects}) => {
+const projects = ({projects=[]}) => {
 
     return (
         <div className={styles.projects}>
