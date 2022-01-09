@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { ScrollToTop } from "react-to-top";
 import ProjectItem from "../components/FeaturedProjects/ProjectItem";
 import Footer from "../components/Footer";
@@ -7,17 +6,7 @@ import { getProjects } from "../services";
 
 import styles from '../styles/Projects.module.css'
 
-const projects = () => {
-
-    const [projects,setProjects] = useState();
-    useEffect(() => {
-        async function fetchMyAPI() {
-            let response = await getProjects();
-            setProjects(response);
-        }
-      
-        fetchMyAPI();
-    }, [])
+const projects = ({projects}) => {
 
     return (
         <div className={styles.projects}>
@@ -42,9 +31,9 @@ const projects = () => {
 export default projects
 
 
-// export async function getStaticProps() {
-//     const projects = await getProjects();
-//     return {
-//       props: { projects },
-//     };
-// }
+export async function getStaticProps() {
+    const projects = await getProjects();
+    return {
+      props: { projects },
+    };
+}
