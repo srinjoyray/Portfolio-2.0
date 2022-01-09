@@ -5,11 +5,16 @@ import Header from "../components/Header/Header";
 import { getProjects } from "../services";
 import styles from '../styles/Projects.module.css'
 import Projects from "../components/Projects/Projects";
+import Head from "next/head";
 
 const projects = () => {
 
     return (
         <div className={styles.projects}>
+            <Head>
+                <title>Srinjoy Ray</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Header/>
             <div className={styles.body}>
                 <div className={styles.heading}>
