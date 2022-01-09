@@ -31,7 +31,7 @@ const projects = ({projects}) => {
 export default projects
 
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
     const projects = await getProjects();
     return {
       props: { projects },
