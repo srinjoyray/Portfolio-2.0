@@ -6,7 +6,9 @@ import { getProjects } from "../services";
 
 import styles from '../styles/Projects.module.css'
 
-const projects = ({projects}) => {
+const projects = () => {
+    const projects = await getProjects();
+
     return (
         <div className={styles.projects}>
             <Header/>
@@ -30,9 +32,9 @@ const projects = ({projects}) => {
 export default projects
 
 
-export async function getStaticProps() {
-    const projects = await getProjects();
-    return {
-      props: { projects },
-    };
-  }
+// export async function getStaticProps() {
+//     const projects = await getProjects();
+//     return {
+//       props: { projects },
+//     };
+// }
