@@ -28,11 +28,9 @@ a {
 }
 
 .theme-light {
-  --dark-text: #5E4B56;
+  --dark-text: #7a7177;
   --light-text: #5E4B56;
   --dark-background: #DBE7E4;
   --light-background: #EDDCD2;
-  --accent: #DBE7E4;
-  --button-border: #5E4B56;
-  --gradient: linear-gradient(97deg, rgba(249,35,40,1) 0%, rgba(143,230,47,1) 52%, rgba(255,33,0,1) 100%);
+  --gradient: linear-gradient(97deg, rgba(249,35,40,1) 12%, rgba(199,43,143,1) 35%, rgba(41,32,219,1) 67%, rgba(199,43,143,1) 95%);
 }
