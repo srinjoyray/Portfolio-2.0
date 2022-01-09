@@ -12,16 +12,16 @@ import Contact from '../components/Contact'
 import Achievements from '../components/Achievements'
 import Footer from '../components/Footer'
 
-export default function Home({about,projects,achievements}) {
+export default function Home() {
  
   return (
     <div className={styles.home}>
       
 
       <Header/>
-      <About about={about} />
-      <FeaturedProjects projects={projects} />
-      <Achievements achievements={achievements} />
+      <About  />
+      <FeaturedProjects />
+      <Achievements />
       <Contact/>
       <Footer/>
       <ScrollToTop symbol='↑' symbolSize={25} symbolColor='var(--light-text)' strokeEmptyColor='var(--dark-text)' strokeFillColor='var(--light-text)'	 bgColor='var(--light-background)' />
@@ -29,11 +29,11 @@ export default function Home({about,projects,achievements}) {
   )
 }
 
-export async function getStaticProps() {
-  const about = await getAbout();
-  const projects = await getFeaturedProjects();
-  const achievements = await getAchievements();
-  return {
-    props: { about , projects , achievements },
-  };
-}
+// export async function getStaticProps() {
+//   const about = await getAbout();
+//   const projects = await getFeaturedProjects();
+//   const achievements = await getAchievements();
+//   return {
+//     props: { about , projects , achievements },
+//   };
+// }

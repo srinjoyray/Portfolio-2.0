@@ -1,12 +1,20 @@
 import { faExternalLinkAlt, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { getAchievements } from '../services';
 
 import styles from '../styles/Achievement.module.css';
 
-const Achievements = ({achievements}) => {
-    // console.log(achievements);
+const Achievements = () => {
+    const [achievements,setAchievements] = useState();
+    const fetchAchievements = async() =>{
+        setAchievements(await getAchievements());
+    }
+    useEffect(() => {
+        fetchAchievements();
+    }, [])
 
     return (
         <div id="achievements" className={styles.achievements}>
@@ -18,9 +26,10 @@ const Achievements = ({achievements}) => {
                 lineColor='var(--light-text)'
                 className={styles.timeline}
                 animate={false}
+                
             >
                 {
-                    achievements.map((achievement,index)=>
+                    achievements?.map((achievement,index)=>
                         <VerticalTimelineElement
                             key={index}
                             date={achievement.date}

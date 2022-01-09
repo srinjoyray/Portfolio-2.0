@@ -6,20 +6,30 @@ import Link from 'next/link'
 
 import HomeImage from '../assets/Home.png'
 import styles from '../styles/About.module.css';
+import { useEffect, useState } from 'react';
+import { getAbout } from '../services';
 
-export default function About({about}) {
-    const {tagline,bio} = about;
-    
+export default function About() {
+    const [about,setAbout] = useState();
+
+    const fetchAbout = async() =>{
+        setAbout(await getAbout());
+    }
+    useEffect(() => {
+        fetchAbout();
+    }, [])
+
+
     return (
         <div id="about" className={styles.about}>
             <div className={styles.aboutContent}>
                 <p className={styles.name}>Hi, I&#39;m Srinjoy Ray</p>
                 
-                <span className={styles.tagline}> {tagline} </span>
+                <span className={styles.tagline}> {about?.tagline} </span>
 
                 <div className={styles.bioGroup}>
                 { 
-                    bio.map((item,index) => 
+                    about?.bio?.map((item,index) => 
                     <p className={styles.bio} key={index}> {item} </p> 
                     )
                 }

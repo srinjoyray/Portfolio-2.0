@@ -3,9 +3,18 @@ import styles from '../../styles/FeaturedProjects.module.css';
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { getFeaturedProjects } from "../../services";
 
-const FeaturedProjects = ({projects}) => {
-    // console.log(projects);
+const FeaturedProjects = () => {
+    const [projects,setProjects] = useState();
+    const fetchProjects = async() =>{
+        setProjects(await getFeaturedProjects());
+    }
+    useEffect(() => {
+        fetchProjects();
+    }, [])
+
     return (
         <div className={styles.projects} id="projects">
             <div className={styles.heading}>
@@ -13,7 +22,7 @@ const FeaturedProjects = ({projects}) => {
             </div>
             <div className={styles.projectItem}>
                 {
-                    projects.map((project,index) => <ProjectItem key={index} project={project} /> )
+                    projects?.map((project,index) => <ProjectItem key={index} project={project} /> )
                 }
             </div>
             <Link href="/projects" passHref={true}>
