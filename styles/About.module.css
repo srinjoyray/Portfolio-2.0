@@ -60,30 +60,30 @@
         flex-direction: column;
     }
     .name{
-        font-size: 36px;
+        font-size: 30px;
         margin-bottom: 20px;
     }
     .tagline{
-        font-size: 24px;
+        font-size: 20px;
     }
     .bioGroup{
-        font-size: 18px;
-        margin: 20px 0;
+        font-size: 16px;
+        margin: 15px 0;
     }
     .aboutLinks{
         margin-left: 2px;
     }
     .aboutIcon{
-        margin-right: 20px;
-        font-size: 26px;
+        margin-right: 15px;
+        font-size: 20px;
     }
     .aboutButtons{
-        margin: 20px 0;
+        margin: 15px 0;
     }
     .button{
         margin-right: 15px;
         padding: 4px 8px;
-        font-size: 16px;
+        font-size: 14px;
     }
     .buttonIcon{
         font-size: 14px;
