@@ -26,7 +26,6 @@ const Achievements = () => {
                 lineColor='var(--light-text)'
                 className={styles.timeline}
                 animate={false}
-                children={null}
             >
                 {
                     achievements?.map((achievement,index)=>

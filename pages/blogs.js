@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react"
 import Head from 'next/head';
 import { ScrollToTop } from "react-to-top";
 
 import Footer from '../components/Footer';
 import Header from '../components/Header/Header';
-import { getBlogs } from '../services';
 import styles from '../styles/Blogs.module.css';
-import BlogItem from "../components/Blogs/BlogItem";
+import { Blogs } from '../components/Blogs/Blogs';
 
 const blogs = () => {
-    const [blogs,setBlogs] = useState();
-    const fetchBlogs = async() =>{
-        setBlogs(await getBlogs());
-    }
-    useEffect(() => {
-        fetchBlogs();
-    }, [])
+    
+    
 
     return (
         <div className={styles.blogs}>
@@ -28,10 +21,10 @@ const blogs = () => {
                 <div className={styles.heading}>
                     Blogs
                 </div>
+                <div className={styles.blogItem}>
+                    <Blogs />
+                </div>
                 
-                {
-                    blogs?.map((blog)=> <BlogItem blog={blog} /> )
-                }
             
             </div>
             <Footer/>
