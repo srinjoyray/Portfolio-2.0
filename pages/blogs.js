@@ -1,9 +1,22 @@
+import { useEffect, useState } from "react"
 import Head from 'next/head';
+import { ScrollToTop } from "react-to-top";
+
 import Footer from '../components/Footer';
 import Header from '../components/Header/Header';
+import { getBlogs } from '../services';
 import styles from '../styles/Blogs.module.css';
+import BlogItem from "../components/Blogs/BlogItem";
 
 const blogs = () => {
+    const [blogs,setBlogs] = useState();
+    const fetchBlogs = async() =>{
+        setBlogs(await getBlogs());
+    }
+    useEffect(() => {
+        fetchBlogs();
+    }, [])
+
     return (
         <div className={styles.blogs}>
             <Head>
@@ -15,11 +28,14 @@ const blogs = () => {
                 <div className={styles.heading}>
                     Blogs
                 </div>
-                <div className={styles.comingSoon}>
-                    Coming Soon
-                </div>                
+                
+                {
+                    blogs?.map((blog)=> <BlogItem blog={blog} /> )
+                }
+            
             </div>
             <Footer/>
+            <ScrollToTop symbol='↑' symbolSize={25} symbolColor='var(--light-text)' strokeEmptyColor='var(--dark-text)' strokeFillColor='var(--light-text)'	 bgColor='var(--light-background)' />
         </div>
     )
 }

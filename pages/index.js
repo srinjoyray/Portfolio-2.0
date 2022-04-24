@@ -6,14 +6,13 @@ import FeaturedProjects from '../components/Projects/FeaturedProjects'
 import { getAbout, getAchievements, getFeaturedProjects, } from '../services'
 import { ScrollToTop } from 'react-to-top'
 
-
 import styles from '../styles/Home.module.css'
 import Contact from '../components/Contact'
 import Achievements from '../components/Achievements'
 import Footer from '../components/Footer'
 
 export default function Home() {
- 
+  
   return (
     <div className={styles.home}>
       <Head>
@@ -31,12 +30,3 @@ export default function Home() {
     </div>
   )
 }
-
-// export async function getStaticProps() {
-//   const about = await getAbout();
-//   const projects = await getFeaturedProjects();
-//   const achievements = await getAchievements();
-//   return {
-//     props: { about , projects , achievements },
-//   };
-// }

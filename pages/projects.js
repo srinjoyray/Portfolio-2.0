@@ -21,9 +21,6 @@ const projects = () => {
                     Projects
                 </div>
                 <div className={styles.projectItem}>
-                    {/* {
-                        projects?.map((project,index) => <ProjectItem key={index} project={project} /> )
-                    } */}
                     <Projects/>
                 </div>
             </div>

@@ -12,14 +12,7 @@
     text-align: center;
 }
 .body{
-    height: 80vh;
-}
-.comingSoon{
-    color: var(--light-text);
-    margin: auto;
-    font-size: 24px;
-    text-align: center;
-    margin-top: 100px;
+    min-height: 80vh;
 }
 
 @media only screen and (max-width: 800px){

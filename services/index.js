@@ -20,13 +20,14 @@ export const getAbout = async () => {
 export const getProjects = async () => {
     const query = gql`
         query MyQuery {
-            projects {
+            projects(orderBy: order_ASC) {
                 description
                 featuredProject
                 github
                 live
                 title
                 technology
+                order
                 image {
                     url
                 }
@@ -41,13 +42,14 @@ export const getProjects = async () => {
 export const getFeaturedProjects = async () => {
     const query = gql`
         query MyQuery {
-            projects(where: {featuredProject:true}) {
+            projects(where: {featuredProject:true}, orderBy: order_ASC) {
                 description
                 featuredProject
                 github
                 live
                 title
                 technology
+                order
                 image {
                     url
                 }
@@ -74,4 +76,24 @@ export const getAchievements = async () => {
 
     const result = await request(graphqlAPI, query);
     return result.achievements;
+};
+
+
+export const getBlogs = async () => {
+    const query = gql`
+    query MyQuery {
+        blogs(orderBy: createdAt_DESC) {
+          excerpt
+          link
+          slug
+          title
+          featuredImage {
+            url
+          }
+        }
+    }
+    `;
+
+    const result = await request(graphqlAPI, query);
+    return result.blogs;
 };
